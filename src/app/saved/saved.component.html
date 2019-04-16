@@ -1,11 +1,36 @@
-<p-orderList [value]="SavedData" [listStyle]="{'height':'250px'}" header="SavedData" 
-    filter="filter" filterBy="name" filterPlaceholder="Filter by name" dragdrop="true">
-    <ng-template let-saved pTemplate="item">
-        <div class="ui-helper-clearfix">
-            <div style="font-size:14px;float:left;margin:15px 5px 0 0">
-              {{saved.name}} - {{saved.address.streetAddress}} - {{saved.address.city}} - {{saved.address.state}} - {{saved.address.zip}}
+<p-carousel headerText="Companies" [value]="SavedData" numVisible="3">
+        <ng-template let-saved pTemplate="saved">
+            <div class="ui-grid ui-grid-responsive" >
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-6">Name</div>
+                    <div class="ui-grid-col-6">{{saved.name}}</div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-6">Address</div>
+                    <div class="ui-grid-col-6">{{saved.address.streetAddress}}</div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-6">City</div>
+                    <div class="ui-grid-col-6">{{saved.address.city}}</div>
+                </div>
+                <div class="ui-grid-row">
+                  <div class="ui-grid-col-6">State</div>
+                  <div class="ui-grid-col-6">{{saved.address.state}}</div>
+                </div>
+                <div class="ui-grid-row">
+                  <div class="ui-grid-col-6">Zip</div>
+                  <div class="ui-grid-col-6">{{saved.address.zip}}</div>
+                </div>
+                <div class="ui-grid-row">
+                  <div class="ui-grid-col-12">
+                        <p class="pi pi-trash" style="font-size: 24px;"></p>
+                  </div>
+                </div>
             </div>
-            <p class="pi pi-trash" style="float:right"></p>
-        </div>
-    </ng-template>
-</p-orderList>
+        </ng-template>
+      </p-carousel>
+
+
+
+
+

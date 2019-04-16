@@ -1,4 +1,31 @@
+<p-toolbar class="companiesBar">Companies</p-toolbar>
+<p-table [value]="AllData">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Add</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.address.streetAddress}}</td>
+            <td>{{data.address.city}}</td>
+            <td>{{data.address.state}}</td>
+            <td>{{data.address.zip}}</td>
+            <td><p class="pi pi-plus-circle" style="font-size: 30px; margin: 0;" (click)="addCompany(data)"></p></td>
+        </tr>
+    </ng-template>
+  </p-table>
 
+
+
+
+<!--
 <p-carousel headerText="Companies" [value]="AllData" numVisible="3">
   <ng-template let-data pTemplate="data">
       <div class="ui-grid ui-grid-responsive" >
@@ -29,4 +56,4 @@
           </div>
       </div>
   </ng-template>
-</p-carousel>
+</p-carousel> -->

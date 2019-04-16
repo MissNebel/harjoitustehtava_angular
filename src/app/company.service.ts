@@ -35,6 +35,10 @@ export class CompanyService {
     return this.http.post(this.serverUrl + "/add", company)
   }
 
+  deleteCompany(company: Object): Observable<Object> {
+    return this.http.delete(this.serverUrl + "/delete/id", company)
+  }
+
   newCompany(): void {
     this.submitted = false;
     this.company = new Company();
