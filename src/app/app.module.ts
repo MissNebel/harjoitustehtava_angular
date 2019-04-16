@@ -13,7 +13,8 @@ import { SavedComponent } from './saved/saved.component';
 import { AccordionModule } from 'primeng/accordion'; 
 import { CarouselModule } from 'primeng/carousel';
 import { TabMenuModule } from 'primeng/tabmenu';
-import { MenuItem } from 'primeng/api';
+import {OrderListModule} from 'primeng/orderlist';
+
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MenuItem } from 'primeng/api';
     HttpClientModule,
     AccordionModule,
     CarouselModule,
-    TabMenuModule
+    TabMenuModule,
+    OrderListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

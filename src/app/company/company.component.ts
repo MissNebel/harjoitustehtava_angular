@@ -11,7 +11,6 @@ import { CompanyService } from '../company.service';
 export class CompanyComponent implements OnInit {
 
   AllData: any = []
-  DbData: any = []
 
   constructor(public service: CompanyService) { }
 
@@ -23,12 +22,6 @@ export class CompanyComponent implements OnInit {
     return this.service.getData().subscribe((data: {}) => {
       this.AllData = data;
       console.log(this.AllData);
-    })
-  }
-
-  showDbData() {
-    return this.service.getAllCompanies().subscribe((companies: {}) => {
-      this.DbData = companies;
     })
   }
 

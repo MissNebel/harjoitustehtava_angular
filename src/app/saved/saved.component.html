@@ -1,3 +1,11 @@
-<p>
-  saved works!
-</p>
+<p-orderList [value]="SavedData" [listStyle]="{'height':'250px'}" header="SavedData" 
+    filter="filter" filterBy="name" filterPlaceholder="Filter by name" dragdrop="true">
+    <ng-template let-saved pTemplate="item">
+        <div class="ui-helper-clearfix">
+            <div style="font-size:14px;float:left;margin:15px 5px 0 0">
+              {{saved.name}} - {{saved.address.streetAddress}} - {{saved.address.city}} - {{saved.address.state}} - {{saved.address.zip}}
+            </div>
+            <p class="pi pi-trash" style="float:right"></p>
+        </div>
+    </ng-template>
+</p-orderList>
