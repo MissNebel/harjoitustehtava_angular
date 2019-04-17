@@ -1,0 +1,19 @@
+<p-panel header="Login" [toggleable]="false" [style]="{'margin-bottom':'20px'}">
+    <h3 style="margin-bottom: 2%;">User</h3>
+    <span class="ui-float-label" style="margin-bottom:3%;">
+        <input id="float-input" type="text" size="30" [(ngModel)]="username" pInputText> 
+        <label for="float-input">user</label>
+    </span>
+    <h3 style="margin-bottom: 2%;">Password</h3>
+    <span class="ui-float-label" style="margin-bottom:3%;">
+        <input id="float-input" type="text" size="30" [(ngModel)]="password" pInputText> 
+        <label for="float-input">password</label>
+    </span>
+    
+    <button pButton type="button" label="Log in" (click)=checkLogin() style="margin-bottom:3%;"></button>
+</p-panel>
+
+
+
+
+

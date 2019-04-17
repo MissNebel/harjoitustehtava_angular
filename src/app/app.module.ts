@@ -16,13 +16,21 @@ import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { ToolbarModule } from 'primeng/toolbar';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
-    SavedComponent
+    SavedComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,10 @@ import { ToolbarModule } from 'primeng/toolbar';
     MenubarModule,
     TableModule,
     ToolbarModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    InputTextModule,
+    ButtonModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -28,11 +28,17 @@ export class CompanyService {
   }
 
   getAllCompanies(): Observable<any> {
-    return this.http.get(this.serverUrl + "/companies")
+    let username='user'
+    let password='password'
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    return this.http.get(this.serverUrl + "/companies",{headers})
   }
 
   postCompany(company: Object): Observable<Object> {
-    return this.http.post(this.serverUrl + "/add", company)
+    let username='user'
+    let password='password'
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    return this.http.post(this.serverUrl + "/add", company,{headers})
   }
 
   deleteCompany(company: Object): Observable<Object> {
